@@ -70,8 +70,6 @@ public class HomeWork2 {
         for (double c = 1, d = 3; c <= 97 && d <= 99; c += 2, d += 2)
         {
             a = a + c / d;
-            // System.out.print(c);
-            // System.out.print("/" + d + " + ");
         }
         System.out.println(" will be ");
         System.out.println(a);
