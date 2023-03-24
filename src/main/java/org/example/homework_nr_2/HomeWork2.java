@@ -44,49 +44,43 @@ public class HomeWork2 {
             default:
                 System.out.println("wrong month nr");
         }
-
-        //punkt 5
+//punkt 5
         int number = 0;
-        for (int num = 100; num <= 1000; num += 5) {
+        for (int num = 100; num <= 1000; num += 5)
+        {
             System.out.println(number + num);
         }
-
-        //punkt 5.1
+//punkt 5.1 ( bolee vernaya versiya zadaniya)
         System.out.println("vtoroy variant:");
-        for (int k = 100; k <= 1000; k++) {
-
-            if (k % 5 == 0) {
+        for (int k = 100; k <= 1000; k++)
+        {
+            if (k % 5 == 0)
+            {
                 System.out.println(k);
-
             }
         }
 //punkt 6
-
         double a = 0;
         System.out.print("Sum of ");
-        for (int o = 1, p = 3; o <= 97 && p <= 99; o += 2, p += 2) {
+        for (int o = 1, p = 3; o <= 97 && p <= 99; o += 2, p += 2)
+        {
             System.out.print(o);
             System.out.print("/" + p + " + ");
         }
-        for (double c = 1, d = 3; c <= 97 && d <= 99; c += 2, d += 2) {
-
+        for (double c = 1, d = 3; c <= 97 && d <= 99; c += 2, d += 2)
+        {
             a = a + c / d;
-
-
             // System.out.print(c);
             // System.out.print("/" + d + " + ");
-
-
         }
         System.out.println(" will be ");
         System.out.println(a);
-
-
 //punkt 7
         char star = '*';
-        for (int z = 0; z <= 9; z++) {
-
-            for (int y = 1; y <= z; y++) {
+        for (int z = 0; z <= 9; z++)
+        {
+            for (int y = 1; y <= z; y++)
+            {
                 System.out.print(star);
             }
             System.out.println(star);
