@@ -46,29 +46,22 @@ public class Clock {
             m = 0;
         } else {m = newM % 60;}
     }
-
     public void setSeconds(int newS) {
         s = newS;
         if (s >= 0 && s <= 59) {
             s = 0;
         }else {s = newS % 60;}
     }
-
     public int getHours() {
         return h;
     }
-
     public int getMinutes() {
         return m;
     }
-
     public int getSeconds() {
         return s;
     }
 
-    public String toString() {
-        return h + ":"+m+":"+s;
-    }
     public void tick() {
         s = s + 1;
         if (s >= 59) {
@@ -82,6 +75,29 @@ public class Clock {
         if (h >= 24) {
             h = 0;
         }
+    }
+    public void addClock(Clock sys){
+        s = sys.s + s;
+        if (s >= 0 && s <= 59) {
+            this.s=s;
+        } else {s = s % 60;
+        m++;}
+
+        m = sys.m + m;
+        if (m >= 0 && m <= 59) {
+            this.m = m;
+        } else {m = m % 60;}
+
+        h = sys.h + h;
+        if (h >= 0 && h <= 23) {
+            this.h = h;
+        } else {
+            setHours(h);
+        }
+
+   //  System.out.println("sum of c1 and c2 "+h+ ":"+ m +":"+ s);
+//        System.out.print(sys.m+m);
+//        System.out.print(sys.s+s);
     }
     public void tickDown() {
         s = s - 1;
@@ -97,7 +113,20 @@ public class Clock {
             h = 23;
         }
     }
+    public String toString() {
+        String timeformat = "";
+        if(h<10)
+            timeformat +="0";
+        timeformat += h + ":";
+        if(m<10)
+            timeformat+="0";
+        timeformat += m + ":";
+        if(s<10)
+            timeformat+="0";
+        timeformat += s;
 
+        return timeformat;
+    }
 
 }
 
