@@ -31,13 +31,13 @@ public class HomeWork5 {
 //“987654321987654321” -> long
 //“4444.5d” -> double
 //“2354.56f” -> float
- String str_bl = "true";
- String str_byt = "120";
- String str_sht= "32000";
- String str_int = "147895632";
- String str_lng = "987654321987654321";
- String str_dbl = "4444.5d";
- String str_flt = "2354.56f";
+             String str_bl = "true";
+             String str_byt = "120";
+             String str_sht= "32000";
+             String str_int = "147895632";
+             String str_lng = "987654321987654321";
+             String str_dbl = "4444.5d";
+             String str_flt = "2354.56f";
                 boolean bul = Boolean.parseBoolean(str_bl);
                 System.out.println(bul);
                 byte b = Byte.parseByte(str_byt);
