@@ -13,12 +13,12 @@ public enum Weekday {
             this.weekday = weekday;
         }
         public boolean isWeekDay(){
-            if(weekday!="SUNDAY" || weekday!="SATURDAY"){
+            if(this != SUNDAY || this!= SATURDAY){
                 return true;}
             else { return false;}
         }
         public boolean isHoliday(){
-            if(weekday=="SUNDAY" || weekday=="SATURDAY"){
+            if(this == SUNDAY || this==SATURDAY){
                 return true;}
             else { return false;}
         }
