@@ -17,8 +17,8 @@ public class Programmer extends Employee implements AttenTraining{
     }
 
     @Override
-    public void training() {
-
+    public boolean training() {
+        return true;
     }
 
     @Override

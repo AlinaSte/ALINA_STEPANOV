@@ -23,13 +23,13 @@ public class Manager extends Employee implements AttenTraining,AttenInterview{
     }
 
     @Override
-    public void training() {
-
+    public String toString() {
+        return "Manager{" + "name='" + name + '\'' + ", surname='" + surname +'\''+ ", teamSize=" + teamSize + ' ' + '}';
     }
 
     @Override
-    public String toString() {
-        return "Manager{" + "name='" + name + '\'' + ", surname='" + surname +'\''+ ", teamSize=" + teamSize + ' ' + '}';
+    public boolean training() {
+        return true;
     }
 }
 

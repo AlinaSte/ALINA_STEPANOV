@@ -1,5 +1,9 @@
 package org.example.homework_nr_9;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Employee manager1 = new Manager("Oleg", "Ivanov", 15);
@@ -13,9 +17,15 @@ public class Main {
                 programmer1,
                 programmer2
         };
-        MeetingRoom MR1= new MeetingRoom();
-        MR1.meetingRoomTraining(array);
-        System.out.println("------------");
-        MR1.meetingRoomInterview(array);
+        List<AttenTraining> al= new ArrayList<>();
+        MeetingRoom MR1= new MeetingRoom((ArrayList<AttenTraining>)al);
+        MR1.verifyEmployee(array);
+
+//        MR1.verifyEmployee(array,(e)->{
+//            return e instanceof AttenTraining;
+//        } );
+//        MR1.meetingRoomTraining(array);
+//        System.out.println("------------");
+//        MR1.meetingRoomInterview(array);
 }
 }
