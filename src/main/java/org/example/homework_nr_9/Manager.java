@@ -1,5 +1,7 @@
 package org.example.homework_nr_9;
 
+import java.sql.SQLOutput;
+
 public class Manager extends Employee implements AttenTraining,AttenInterview{
     Integer teamSize;
 
@@ -19,7 +21,7 @@ public class Manager extends Employee implements AttenTraining,AttenInterview{
 
     @Override
     public void interview() {
-
+        System.out.println(super.name+" can attend interview");
     }
 
     @Override
@@ -28,8 +30,8 @@ public class Manager extends Employee implements AttenTraining,AttenInterview{
     }
 
     @Override
-    public boolean training() {
-        return true;
+    public void training() {
+        System.out.println(super.name+ " "+ super.surname+" can attend training");
     }
 }
 

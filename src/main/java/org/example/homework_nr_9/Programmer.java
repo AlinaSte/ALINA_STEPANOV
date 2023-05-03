@@ -17,8 +17,8 @@ public class Programmer extends Employee implements AttenTraining{
     }
 
     @Override
-    public boolean training() {
-        return true;
+    public void training() {
+        System.out.println(super.name+" "+ super.surname+ " can attend training");
     }
 
     @Override

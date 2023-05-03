@@ -2,7 +2,10 @@ package org.example.homework_nr_9;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+
+import static java.util.Arrays.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,9 +20,20 @@ public class Main {
                 programmer1,
                 programmer2
         };
-        List<AttenTraining> al= new ArrayList<>();
+        List<AttenTraining> al = new ArrayList<>();
+        List list = new ArrayList();
+        list.addAll(Arrays.asList(array));
+        list.forEach(e-> {
+            if (e instanceof AttenTraining)
+                al.add((AttenTraining) e);
+        });
         MeetingRoom MR1= new MeetingRoom((ArrayList<AttenTraining>)al);
-        MR1.verifyEmployee(array);
+        MR1.verifyEmployee();
+
+//        List<AttenTraining> al= new ArrayList<>();
+//        MeetingRoom MR1= new MeetingRoom((ArrayList<AttenTraining>)al);
+//        MR1.verifyEmployee();
+
 
 //        MR1.verifyEmployee(array,(e)->{
 //            return e instanceof AttenTraining;

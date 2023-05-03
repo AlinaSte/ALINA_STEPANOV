@@ -1,19 +1,19 @@
 package org.example.homework_nr_9;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MeetingRoom {
+    List<AttenTraining> inputlist;
     public MeetingRoom(ArrayList<AttenTraining> train) {
+        inputlist = train;
     }
 
-    public static String verifyEmployee(Employee[] array){
-        for (Employee element:
-             array) {
-            if( element instanceof AttenTraining ){
-                System.out.println(element.toString());
-            }
+    public void verifyEmployee(){
+        for (AttenTraining element:
+             inputlist) {
+            element.training();
         }
-        return null;
     }
 //    public void meetingRoomTraining(Employee[] array) {
 //      for(int i = 0; i!=array.length;i++)
